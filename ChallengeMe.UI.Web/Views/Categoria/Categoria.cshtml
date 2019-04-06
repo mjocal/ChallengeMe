@@ -1,0 +1,36 @@
+﻿@using ChallengeMe.UI.Web.Models.Helpers;
+<script src="~/Scripts/Views/Categorias.js"></script>
+
+<script>
+    $(retrieveAll).ready(function () { });
+    $(generarId).ready(function (){ });
+</script>
+
+
+<h2>Mantenimiento de categorías</h2>
+<p>Por favor ingrese todos los campos que se muestran a continuación</p>
+
+<div class="row">
+    <div class="col-sm-5 clearfix">
+        <div class="panel panel-primary" style="margin-top: 20px;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Información</h3>
+            </div>
+            <div class="panel-body">
+                @Html.CtrlInput(id: "txtId", label: "Id", disabled: false, type: "text", required: true)
+                @Html.CtrlInput(id: "txtNombre", label: "Nombre", type: "text", required: true)
+                @Html.CtrlButton(id: "btnGuardar", value: "Guardar", evtOnClick: "createCategoria()")
+                @Html.CtrlButton(id: "btnActualizar", value: "Actualizar", disabled: true)
+                @Html.CtrlButton(id: "btnEliminar", value: "Eliminar", disabled: true)
+                <br><br />
+                @Html.CtrlButton(id: "btnLimpiar", value: "Limpiar todos los campos", evtOnClick: "limpiarCampos()")
+                @Html.CtrlButton(id: "btnVolver", value: "VOLVER AL INICIO", buttonType: "default", evtOnClick: "volverAlInicio()")
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7">
+        @Html.CtrlTable(id: "tblCategorias", title: "Lista de categorías",
+            columnHeaders: "Id, Nombre",
+            onSelect: "BindCategoriasFields()")
+    </div>
+</div>

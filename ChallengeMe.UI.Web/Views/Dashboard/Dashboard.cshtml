@@ -1,0 +1,126 @@
+﻿@using ChallengeMe.UI.Web.Models.Helpers
+<script src="~/Scripts/Views/Eventos.js"></script>
+
+
+<script>
+    $(retrieveAll).ready(function () { });
+</script>
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="list-group">
+                    
+                    @Html.ActionLink("Mi Perfil", "Perfil", "Perfil", new { area = "" }, new {@class = "list-group-item" })
+                    
+                    <a href="#" class="list-group-item">Crear un evento
+                    </a>
+                    <a href="#" class="list-group-item">Ver inscripciones
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 class="page-header"><i class="glyphicon glyphicon-dashboard"></i> Bienvenido</h1>
+                
+                @Html.CtrlTable(id: "tblEventos", title: "Lista de Eventos",
+                    columnHeaders: "Id, Nombre, Descripcion",
+                    onSelect: "BindEventosFields()")  
+                
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Próximos Eventos</h3>
+                    </div>
+                    <div class="panel-body">
+                        Listado de los próximos eventos
+                    </div>
+                
+                
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <th>Evento</th>
+                            <th>Fecha inicio evento</th>
+                            <th>Cantidad Participantes</th>
+                            <th>Cupo</th>
+                            <th>% Participantes Inscritos</th>
+                            <th>Cantidad Patrocinadores</th>
+                            <th>Ingresos por Patrocinio</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Dakota Rice</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                            <td>Oud-Turnhout</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                                        	
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Minerva Hooper</td>
+                            <td>$23,789</td>
+                            <td>Curaçao</td>
+                            <td>Sinaai-Waas</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                                        	
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sage Rodriguez</td>
+                            <td>$56,142</td>
+                            <td>Netherlands</td>
+                            <td>Baileux</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                                        	
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Philip Chaney</td>
+                            <td>$38,735</td>
+                            <td>Korea, South</td>
+                            <td>Overland Park</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                                        	
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Doris Greene</td>
+                            <td>$63,542</td>
+                            <td>Malawi</td>
+                            <td>Feldkirchen in Kärnten</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                                        	
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mason Porter</td>
+                            <td>$78,615</td>
+                            <td>Chile</td>
+                            <td>Gloucester</td>
+                            <td>$36,738</td>
+                            <td>Niger</td>
+                                        	
+                        </tr>
+                    </table>
+
+                <a class="btn btn-primary" href="pages.html">View All Pages</a>
+                <hr>
+
+                @*<a class="btn btn-primary" href="pages.html">View All Pages</a>
+                <hr>
+                <a class="btn btn-primary" href="users.html">View All Users</a>*@
+            </div>
+        </div>
+    </div>
+</div>
+</section>

@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "Perfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="titleText">Mi Perfil</h2>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="profile">
+                    <h1 class="page-header">Pedro Picapiedra</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="~/Images/user.png" class="img-thumbnail" />
+                        </div>
+                        <div class="col-md-8">
+                            <ul>
+                                <li><strong>Nombre:</strong> Pedro Picapiedra</li>
+                                <li><strong>Correo Electrónico: </strong>ppiedra@gmail.com</li>
+                                <li><strong>Ciudad: </strong>Heredia</li>
+                                <li><strong>Cantón: </strong>San Pablo</li>
+                                <li><strong>Género:</strong> Masculino</li>
+                                <li><strong>Profesión: </strong>Desarrollador Web</li>
+                                <li><a href="#" class="btn btn-primary btn-xs">Editar mi Perfil</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <br></br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Mi muro</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Escribir en el muro..."></textarea>
+                                        </div>
+                
+                                        <button type="submit" class="btn btn-default">Enviar</button>
+                                        <div class="pull-right">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Texto</button>
+                                                <button type="button" class="btn btn-default"><i class="fa fa-file-image-o"></i> Imagen</button>
+                                                <button type="button" class="btn btn-default"> <i class="fa fa-file-video-o"></i> Video</button>
+                                            </div>
+                                        </div>
+                                    </form>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- col-md-8 end -->
+
+            <div class="col-md-4">
+                <div class="panel panel-default friends">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mis Amigos</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                            <li><a class="thumbnail" href="profile.html"><img src="~/Images/user.png"></a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <a class="btn btn-primary" href="#">Ver todos mis amigos</a>
+                    </div>
+                </div>
+                
+                <div class="panel panel-default groups">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mis Ligas</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="group-item">
+                            <img src="~/Images/icons8-Wrestling-96.png">
+                            <h4><a href="#">Liga Uno</a></h4>
+                            <p>Esto es un liga de prueba</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group-item">
+                            <img src="~/Images/icons8-Wrestling-96.png">
+                            <h4><a href="#">Liga Dos</a></h4>
+                            <p>Esto es un liga de prueba</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group-item">
+                            <img src="~/Images/icons8-Wrestling-96.png">
+                            <h4><a href="#">Liga Tres</a></h4>
+                            <p>Esto es un liga de prueba</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <a class="btn btn-primary" href="#">Ver todas las ligas</a>
+                    </div>
+                </div>
+
+                <div class="panel panel-default groups">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Últimos Grupos</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="group-item">
+                            <img src="~/Images/icons8-People-96.png">
+                            <h4><a href="#">Grupo Uno</a></h4>
+                            <p>Esto es un grupo de prueba</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group-item">
+                            <img src="~/Images/icons8-People-96.png">
+                            <h4><a href="#">Grupo Dos</a></h4>
+                            <p>Esto es un grupo de prueba</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="group-item">
+                            <img src="~/Images/icons8-People-96.png">
+                            <h4><a href="#">Grupo Tres</a></h4>
+                            <p>Esto es un grupo de prueba</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <a class="btn btn-primary" href="#">Ver todos los grupos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,38 @@
+﻿@using ChallengeMe.UI.Web.Models.Helpers;
+<script src="~/Scripts/Views/Actividades.js"></script>
+
+<script>
+    $(retrieveAll).ready(function () { });
+    $(generarId).ready(function (){ });
+</script>
+
+
+<h2>Mantenimiento de Actividades</h2>
+<p>Por favor ingrese todos los campos que se muestran a continuacion</p>
+
+<div class="row">
+    <div class="col-sm-5 clearfix">
+        <div class="panel panel-primary" style="margin-top: 20px;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Informacion</h3>
+            </div>
+            <div class="panel-body">
+                @Html.CtrlInput(id: "txtId", label: "Id", disabled: false, type: "text", required: true)
+                @Html.CtrlInput(id: "txtNombre", label: "Nombre", type: "text", required: true)
+                @Html.CtrlInput(id: "txtDescripcion", label: "Descripcion", type: "text", required: false)
+                @Html.CtrlButton(id: "btnGuardar", value: "Guardar", evtOnClick: "createActividad()")
+                @*@Html.CtrlButton(id: "btnBuscar", value: "Buscar", evtOnClick: "retrieveActividad()")*@
+                @Html.CtrlButton(id: "btnActualizar", value: "Actualizar", disabled: true)
+                @Html.CtrlButton(id: "btnEliminar", value: "Eliminar", disabled: true)
+                <br><br />
+                @Html.CtrlButton(id: "btnLimpiar", value: "Limpiar todos los campos", evtOnClick: "limpiarCampos()")
+                @Html.CtrlButton(id: "btnVolver", value: "VOLVER AL INICIO", buttonType: "default", evtOnClick: "volverAlInicio()")
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7">
+        @Html.CtrlTable(id: "tblActividades", title: "Lista de Actividades",
+            columnHeaders: "Id, Nombre, Descripcion",
+            onSelect: "BindActividadesFields()")
+    </div>
+</div>

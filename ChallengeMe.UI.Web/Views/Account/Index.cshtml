@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (Session["Rol"] != null)
+{
+    if (Session["Rol"].ToString().Equals("SA") || Session["Rol"].ToString().Equals("ORGANIZADOR"))
+    {
+
+        Html.RenderPartial("~/Views/Shared/Logueado.cshtml");
+
+    }
+}
+
+else
+{
+    <div class="alert alert-warning" role="alert">
+        Ud no se encuentralogueado!
+    </div>
+
+
+}

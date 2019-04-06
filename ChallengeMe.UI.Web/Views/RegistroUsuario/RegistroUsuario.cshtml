@@ -1,0 +1,47 @@
+﻿@using ChallengeMe.UI.Web.Models.Helpers
+<script src="~/Scripts/Views/Usuarios.js"></script>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    @{
+        ViewBag.Title = "Registro de Usuario";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+
+    }
+</head>
+
+
+<div class="row">
+    <div class="col-sm-7">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Registro de Usuarios</h3>
+            </div>
+            <div class="panel-body">
+                @Html.CtrlInput(id: "txtEmail", label: "Email", required: false,type:"email",placeholder:"Email")
+                @Html.CtrlInput(id: "txtNombre", label: "Nombre", required: false, type: "text",placeholder:"Nombre completo")
+                @Html.CtrlInput(id: "txtClave", label: "Password", required: true, type: "password",placeholder:"Password")
+                @Html.CtrlInput(id: "txtConfirmarClave", label: "Confirmar password", required: true, type: "password",placeholder:"Confirmar password")
+
+
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="">
+                            @*<div class="col-sm-1">@Html.CtrlButton(id: "btnShowAlert", value: "Alerta", buttonType: "danger", evtOnClick: "showAlert()")</div>*@
+                            <div class="col-sm-2">@Html.CtrlButton(id: "btnRegistrar", value: "Registrar", evtOnClick: "createUsuario()")</div>
+                            @*<div class="col-sm-2">@Html.CtrlButton(id: "btnActualizar", value: "Actualizar", evtOnClick: "updateUsuario()")</div>*@
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

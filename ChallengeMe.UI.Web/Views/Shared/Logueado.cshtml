@@ -1,0 +1,9 @@
+﻿
+<div class="alert alert-success" role="alert">
+   @* Soy una vista Parcial Bienvenido*@
+    @if (Session["Rol"] != null)
+    {
+        <text> Su rol es @Session["Rol"].ToString() </text>
+        <text> Usuario  @Session["User"].ToString() </text>
+    }
+</div>

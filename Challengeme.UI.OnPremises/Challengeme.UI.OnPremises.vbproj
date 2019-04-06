@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10721053-763E-4C4C-8FCC-AB5F01372D28}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Challengeme.UI.OnPremises.My.MyApplication</StartupObject>
+    <RootNamespace>Challengeme.UI.OnPremises</RootNamespace>
+    <AssemblyName>Challengeme.UI.OnPremises</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Challengeme.UI.OnPremises.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Challengeme.UI.OnPremises.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionManagement.vb" />
+    <Compile Include="fmPermisos.Designer.vb">
+      <DependentUpon>fmPermisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmPermisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActividad.Designer.vb">
+      <DependentUpon>frmActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizarPerfil.Designer.vb">
+      <DependentUpon>frmActualizarPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmActualizarPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoria.Designer.vb">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuenta.Designer.vb">
+      <DependentUpon>frmCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboardAdministrador.Designer.vb">
+      <DependentUpon>frmDashboardAdministrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboardAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntidad.Designer.vb">
+      <DependentUpon>frmEntidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvento.Designer.vb">
+      <DependentUpon>frmEvento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEventoRuta.Designer.vb">
+      <DependentUpon>frmEventoRuta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEventoRuta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFotografia.Designer.vb">
+      <DependentUpon>frmFotografia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFotografia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInscripciones.Designer.vb">
+      <DependentUpon>frmInscripciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInscripciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuSA.Designer.vb">
+      <DependentUpon>frmMenuSA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuSA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalActividades.Designer.vb">
+      <DependentUpon>frmModalActividades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalActividades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalCategoria.Designer.vb">
+      <DependentUpon>frmModalCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalCrearActividad.Designer.vb">
+      <DependentUpon>frmModalCrearActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalCrearActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalCrearPremios.Designer.vb">
+      <DependentUpon>frmModalCrearPremios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalCrearPremios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalCrearProducto.Designer.vb">
+      <DependentUpon>frmModalCrearProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalCrearProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalEventoProducto.Designer.vb">
+      <DependentUpon>frmModalEventoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalEventoProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalPatrocinadores.Designer.vb">
+      <DependentUpon>frmModalPatrocinadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalPatrocinadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalPremios.designer.vb">
+      <DependentUpon>frmModalPremios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalPremios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModalProducto.Designer.vb">
+      <DependentUpon>frmModalProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModalProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.vb">
+      <DependentUpon>frmPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatrocinadores.designer.vb">
+      <DependentUpon>frmPatrocinadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatrocinadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfil.Designer.vb">
+      <DependentUpon>frmPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremios.Designer.vb">
+      <DependentUpon>frmPremios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPremios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducto.designer.vb">
+      <DependentUpon>frmProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRanking.Designer.vb">
+      <DependentUpon>frmRanking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRanking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteInscripciones.Designer.vb">
+      <DependentUpon>FrmReporteInscripciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteInscripciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoles.Designer.vb">
+      <DependentUpon>frmRoles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRutas.designer.vb">
+      <DependentUpon>frmRutas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRutas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActividad.resx">
+      <DependentUpon>frmActividad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActualizarPerfil.resx">
+      <DependentUpon>frmActualizarPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategoria.resx">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuenta.resx">
+      <DependentUpon>frmCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboardAdministrador.resx">
+      <DependentUpon>frmDashboardAdministrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvento.resx">
+      <DependentUpon>frmEvento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmPermisos.resx">
+      <DependentUpon>fmPermisos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntidad.resx">
+      <DependentUpon>frmEntidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEventoRuta.resx">
+      <DependentUpon>frmEventoRuta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFotografia.resx">
+      <DependentUpon>frmFotografia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInscripciones.resx">
+      <DependentUpon>frmInscripciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuSA.resx">
+      <DependentUpon>frmMenuSA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalActividades.resx">
+      <DependentUpon>frmModalActividades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalCategoria.resx">
+      <DependentUpon>frmModalCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalCrearActividad.resx">
+      <DependentUpon>frmModalCrearActividad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalCrearPremios.resx">
+      <DependentUpon>frmModalCrearPremios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalCrearProducto.resx">
+      <DependentUpon>frmModalCrearProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalEventoProducto.resx">
+      <DependentUpon>frmModalEventoProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalPatrocinadores.resx">
+      <DependentUpon>frmModalPatrocinadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalPremios.resx">
+      <DependentUpon>frmModalPremios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModalProducto.resx">
+      <DependentUpon>frmModalProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatrocinadores.resx">
+      <DependentUpon>frmPatrocinadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfil.resx">
+      <DependentUpon>frmPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremios.resx">
+      <DependentUpon>frmPremios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducto.resx">
+      <DependentUpon>frmProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRanking.resx">
+      <DependentUpon>frmRanking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteInscripciones.resx">
+      <DependentUpon>FrmReporteInscripciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoles.resx">
+      <DependentUpon>frmRoles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRutas.resx">
+      <DependentUpon>frmRutas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Challengeme.ApiCore\Challengeme.ApiCore.csproj">
+      <Project>{3E737FF6-CA54-4CE0-8161-3E66A0D643C3}</Project>
+      <Name>Challengeme.ApiCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Challengeme.DataAccess\Challengeme.DataAccess.csproj">
+      <Project>{2CD3AA5E-BE60-4CFC-BC26-CCA5A6C39DC0}</Project>
+      <Name>Challengeme.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Challengeme.Entities\Challengeme.Entities.csproj">
+      <Project>{64BA8CFE-887E-4232-A7B9-3564494D9C58}</Project>
+      <Name>Challengeme.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Challengeme.Util\Challengeme.Util.csproj">
+      <Project>{6667A298-240C-42CB-AE3E-19620188EB0B}</Project>
+      <Name>Challengeme.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\dashboard-icon-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abiword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-x-fuji-raf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-desktop-accessibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accessories-text-editor-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-users-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo seguridad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-close-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-text-frame-update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-delete-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save-51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo seguridad 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Premios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Premios2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seguridad2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GMaps\GMap.NET.Core.dll" />
+    <Content Include="GMaps\GMap.NET.WindowsForms.dll" />
+    <Content Include="Resources\1.jpg" />
+    <None Include="Resources\X2.png" />
+    <None Include="Resources\configuracion1.png" />
+    <Content Include="Resources\Create.png" />
+    <Content Include="Resources\CreateRol.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\download.jpg" />
+    <Content Include="Resources\Exit.png" />
+    <Content Include="Resources\icon-customer-white.png" />
+    <Content Include="Resources\Icon.ico" />
+    <Content Include="Resources\icons8-Add-Camera-64.png" />
+    <Content Include="Resources\icons8-Add-User-Male-64.png" />
+    <Content Include="Resources\icons8-Building-64.png" />
+    <Content Include="Resources\icons8-Create-64.png" />
+    <None Include="Resources\icons8-Dashboard-64.png" />
+    <Content Include="Resources\icons8-Exit-64.png" />
+    <Content Include="Resources\icons8-Handshake-64.png" />
+    <None Include="Resources\icons8-Leaderboard-64.png" />
+    <Content Include="Resources\icons8-Medal-First-Place-64.png" />
+    <Content Include="Resources\icons8-News-Feed-64.png" />
+    <None Include="Resources\icons8-Registration-64.png" />
+    <Content Include="Resources\icons8-Running-64.png" />
+    <None Include="Resources\icons8-Rutas-64.png" />
+    <Content Include="Resources\icons8-Shopping-Cart-64.png" />
+    <None Include="Resources\icons8-Soccer-64.png" />
+    <Content Include="Resources\icons8-User-64.png" />
+    <Content Include="Resources\icons8-User-Group-Man-Man-64.png" />
+    <Content Include="Resources\Permissions.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\seguridad.jpg" />
+    <Content Include="Resources\seguridad3.jpg" />
+    <Content Include="Resources\SelectPicture.png" />
+    <Content Include="Resources\Update.png" />
+    <Content Include="Resources\Users.png" />
+    <None Include="Resources\X.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

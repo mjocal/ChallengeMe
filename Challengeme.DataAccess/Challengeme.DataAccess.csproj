@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CD3AA5E-BE60-4CFC-BC26-CCA5A6C39DC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Challengeme.DataAccess</RootNamespace>
+    <AssemblyName>Challengeme.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crud\CrudActionEnum.cs" />
+    <Compile Include="Crud\CrudActividad.cs" />
+    <Compile Include="Crud\CrudEvento.cs" />
+    <Compile Include="Crud\CrudEventoActividad.cs" />
+    <Compile Include="Crud\CrudCategoria.cs" />
+    <Compile Include="Crud\CrudEntidad.cs" />
+    <Compile Include="Crud\CrudEventoProducto.cs" />
+    <Compile Include="Crud\CrudEventoRuta.cs" />
+    <Compile Include="Crud\CrudFactory.cs" />
+    <Compile Include="Crud\CrudInscripcion.cs" />
+    <Compile Include="Crud\CrudMessage.cs" />
+    <Compile Include="Crud\CrudPago.cs" />
+    <Compile Include="Crud\CrudPatrocinador.cs" />
+    <Compile Include="Crud\CrudEventoPatrocinador.cs" />
+    <Compile Include="Crud\CrudPatrocinadorProducto.cs" />
+    <Compile Include="Crud\CrudPermisos.cs" />
+    <Compile Include="Crud\CrudPremio.cs" />
+    <Compile Include="Crud\CrudEventoPremio.cs" />
+    <Compile Include="Crud\CrudProducto.cs" />
+    <Compile Include="Crud\CrudPuntoRuta.cs" />
+    <Compile Include="Crud\CrudRanking.cs" />
+    <Compile Include="Crud\CrudRol.cs" />
+    <Compile Include="Crud\CrudRolPermiso.cs" />
+    <Compile Include="Crud\CrudRutaEvento.cs" />
+    <Compile Include="Crud\CrudUser.cs" />
+    <Compile Include="Dao\SqlDao.cs" />
+    <Compile Include="Dao\SqlOperation.cs" />
+    <Compile Include="Management\ExceptionManagement.cs" />
+    <Compile Include="Mapper\EventoActividadMapper.cs" />
+    <Compile Include="Mapper\ActividadMapper.cs" />
+    <Compile Include="Mapper\CategoriaMapper.cs" />
+    <Compile Include="Mapper\EntidadMapper.cs" />
+    <Compile Include="Mapper\EntityMapper.cs" />
+    <Compile Include="Mapper\EventoMapper.cs" />
+    <Compile Include="Mapper\EventoProductoMapper.cs" />
+    <Compile Include="Mapper\EventoRutaMapper.cs" />
+    <Compile Include="Mapper\InscripcionMapper.cs" />
+    <Compile Include="Mapper\IObjectMapper.cs" />
+    <Compile Include="Mapper\ISqlStaments.cs" />
+    <Compile Include="Mapper\PagoMapper.cs" />
+    <Compile Include="Mapper\EventoPatrocinadorMapper.cs" />
+    <Compile Include="Mapper\PatrocinadorMapper.cs" />
+    <Compile Include="Mapper\PatrocinadorProductoMapper.cs" />
+    <Compile Include="Mapper\PermisosMapper.cs" />
+    <Compile Include="Mapper\EventoPremioMapper.cs" />
+    <Compile Include="Mapper\PremioMapper.cs" />
+    <Compile Include="Mapper\ProductoMapper.cs" />
+    <Compile Include="Mapper\PuntoRutaMapper.cs" />
+    <Compile Include="Mapper\RankingMapper.cs" />
+    <Compile Include="Mapper\RolMapper.cs" />
+    <Compile Include="Mapper\RolPermisoMapper.cs" />
+    <Compile Include="Mapper\RutaMapper.cs" />
+    <Compile Include="Mapper\UserMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Challengeme.Entities\Challengeme.Entities.csproj">
+      <Project>{64BA8CFE-887E-4232-A7B9-3564494D9C58}</Project>
+      <Name>Challengeme.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E737FF6-CA54-4CE0-8161-3E66A0D643C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Challengeme.ApiCore</RootNamespace>
+    <AssemblyName>Challengeme.ApiCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventoActividadManagement.cs" />
+    <Compile Include="ActividadManagement.cs" />
+    <Compile Include="BaseManagement.cs" />
+    <Compile Include="CategoriaManagement.cs" />
+    <Compile Include="EntidadManagement.cs" />
+    <Compile Include="EventoManagement.cs" />
+    <Compile Include="EventoProductoManagement.cs" />
+    <Compile Include="EventoRutaManagement.cs" />
+    <Compile Include="ExceptionManagement.cs" />
+    <Compile Include="InscripcionManagement.cs" />
+    <Compile Include="MessageManagement.cs" />
+    <Compile Include="PagoManagement.cs" />
+    <Compile Include="EventoPatrocinadorManagement.cs" />
+    <Compile Include="PatrocinadorManagement.cs" />
+    <Compile Include="PatrocinadorProductoManagement.cs" />
+    <Compile Include="PermisosManagement.cs" />
+    <Compile Include="EventoPremioManagement.cs" />
+    <Compile Include="PremioManagement.cs" />
+    <Compile Include="ProductoManagement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuntoRutaManagement.cs" />
+    <Compile Include="RankingManagement.cs" />
+    <Compile Include="RolManagement.cs" />
+    <Compile Include="RolPermisoManagement.cs" />
+    <Compile Include="RutaManagement.cs" />
+    <Compile Include="UserManagement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Challengeme.DataAccess\Challengeme.DataAccess.csproj">
+      <Project>{2CD3AA5E-BE60-4CFC-BC26-CCA5A6C39DC0}</Project>
+      <Name>Challengeme.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Challengeme.Entities\Challengeme.Entities.csproj">
+      <Project>{64BA8CFE-887E-4232-A7B9-3564494D9C58}</Project>
+      <Name>Challengeme.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

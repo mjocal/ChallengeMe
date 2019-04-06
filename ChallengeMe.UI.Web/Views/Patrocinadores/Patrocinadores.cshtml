@@ -1,0 +1,49 @@
+﻿@using ChallengeMe.UI.Web.Models.Helpers;
+<script src="~/Scripts/Views/Patrocinadores.js"></script>
+
+<script>
+    $(retrieveAll).ready(function () { });
+    $(generarId).ready(function () { });
+</script>
+
+
+<h2>Mantenimiento de patrocinadores</h2>
+<p>Por favor ingrese todos los campos que se muestran a continuación</p>
+
+<div class="row">
+    <div class="col-sm-5 clearfix">
+        <div class="panel panel-primary" style="margin-top: 20px;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Información</h3>
+            </div>
+            <div class="panel-body">
+                @Html.CtrlInput(id: "txtId", label: "Id", disabled: true, type: "text", required: true)
+                @Html.CtrlInput(id: "txtNombre", label: "Nombre", type: "text", required: true)
+                
+                @Html.CtrlImage(id: "imgLogo")
+                @*@using (Html.BeginForm("FileUpload", "Patrocinadores", FormMethod.Post, 
+                    new { enctype = "multipart/form-data" }))*@
+                  @*{*@  
+                    @*<label for="file">Upload Image:</label>*@ 
+                    @Html.CtrlInput(id: "txtImage", label: "Logo", type: "file")
+                    @Html.CtrlInput(id: "uploadImage", label: "Logo", type: "submit")
+                    @*<input type="submit" value="Upload" class="submit" />*@ 
+                @*}*@
+                @*@Html.CtrlButton(id: "btnImagen", value: "Subir imagen", buttonType:"file", evtOnClick: "uploadImage()")*@
+                @Html.CtrlButton(id: "btnGuardar", value: "Guardar", evtOnClick: "createPatrocinador()")
+                @Html.CtrlButton(id: "btnActualizar", value: "Actualizar", disabled: true)
+                @Html.CtrlButton(id: "btnEliminar", value: "Eliminar", disabled: true)
+                <br><br />
+                @Html.CtrlButton(id: "btnLimpiar", value: "Limpiar todos los campos", evtOnClick: "limpiarCampos()")
+                @Html.CtrlButton(id: "btnVolver", value: "VOLVER AL INICIO", buttonType: "default", evtOnClick: "volverAlInicio()")
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="col-sm-7">
+        @Html.CtrlTable(id: "tblPatrocinadores", title: "Lista de patrocinadores",
+            columnHeaders: "Id, Nombre, Logo",
+            onSelect: "BindPatrocinadoresFields()")
+    </div>
+</div>
